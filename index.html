@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yashwant — About Me</title>
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#0f1720; --muted:#9aa6b2; --accent:#61dafb;
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#071017);color:#e6eef6;line-height:1.5}
+    .wrap{max-width:980px;margin:40px auto;padding:28px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+
+    /* header */
+    .header{display:flex;gap:20px;align-items:center}
+    pre.ascii{font-family: 'Courier New',monospace; margin:0; font-size:12px; color:var(--accent); background:transparent}
+
+    /* intro */
+    .intro{display:flex;gap:22px;align-items:center;margin-top:18px}
+    .portrait{width:160px;height:160px;border-radius:50%;background:linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center;overflow:hidden;border:2px solid rgba(255,255,255,0.04)}
+    .portrait img{width:100%;height:100%;object-fit:cover}
+    .about{flex:1}
+    .name{font-size:20px;margin:0 0 6px 0}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* tech stack */
+    .tech{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .tech .chip{background:var(--glass);padding:8px 10px;border-radius:8px;font-weight:600;color:var(--muted);font-size:13px}
+
+    /* spotify */
+    .spotify{margin-top:18px}
+    .spotify .placeholder{padding:14px;border-radius:10px;background:var(--glass-2);color:var(--muted);font-size:14px}
+
+    /* projects */
+    .projects{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+    .card h3{margin:0 0 6px 0}
+    .card p{margin:0 0 10px 0;color:var(--muted);font-size:14px}
+    .link{font-size:13px;color:var(--accent);text-decoration:none}
+
+    /* contact */
+    .contact{margin-top:20px;display:flex;flex-direction:column;gap:8px}
+    a.contact-link{color:var(--accent);text-decoration:none;font-weight:600}
+
+    /* footer */
+    .footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* responsiveness */
+    @media (max-width:720px){
+      .intro{flex-direction:column;align-items:flex-start}
+      .projects{grid-template-columns:1fr}
+      .portrait{width:120px;height:120px}
+    }
+
+    /* little hover */
+    .card:hover{transform:translateY(-6px);transition:transform .18s ease}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <!-- ASCII art header -->
+      <pre class="ascii">   __   __             _    _                 
+  / _| / _| ___  _ __ | |__| | ___  ___  ___  
+ | |_ | |_ / _ \| '_ \|  __  |/ _ \/ __|/ _ \ 
+ |  _||  _| (_) | | | | |  | |  __/\__ \  __/ 
+ |_|  |_|  \___/|_| |_|_|  |_|\___||___/\___| 
+                                              
+   Y A S H W A N T
+      </pre>
+    </div>
+
+    <section class="intro">
+      <div class="portrait">
+        <!-- Replace portrait.jpg with your image at the project root -->
+        <img src="portrait.jpg" alt="Yashwant portrait" onerror="this.src='https://via.placeholder.com/300?text=Portrait'"/>
+      </div>
+      <div class="about">
+        <h1 class="name">Yashwant — Electronics &amp; Comm Engg @ NIT Trichy</h1>
+        <p class="muted">Hello!! glad to see you want to know more about me. So I am B.Yashwant and i am currently pursuing my undergrad in Electronics and Comm Engg at National Institute of Technology, Tiruchirapalli. My various interests include playing my guitar, singing, chess, calisthenics and learning new tech stuff to build interesting projects. I would love to connect with you if you found that even sightly interesting!!!</p>
+
+        <div class="tech" aria-label="Tech stack">
+          <!-- Tech chips: edit the list below if you want different items -->
+          <span class="chip">Python</span>
+          <span class="chip">C</span>
+          <span class="chip">Linux</span>
+          <span class="chip">Bash</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Git</span>
+          <span class="chip">C++</span>
+          <span class="chip">Golang</span>
+          <span class="chip">React</span>
+          <span class="chip">HTML/CSS</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="spotify">
+      <h2 style="margin:12px 0 8px 0">Currently vibing</h2>
+      <div class="placeholder">
+        <!-- Spotify embed placeholder: To add your playlist/song, go to Spotify -> three dots -> Share -> Embed track -> copy the iframe and paste it here replacing this comment. -->
+        <div style="padding:6px 0">Paste your Spotify embed iframe here to show your current playlist. Example (commented in source):</div>
+        <!-- Example:
+        <iframe src="https://open.spotify.com/embed/playlist/YOUR_PLAYLIST_ID" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        -->
+        <div style="margin-top:8px;color:var(--muted);font-size:13px">No Spotify embed detected — replace this box by pasting your Spotify iframe in the HTML where indicated.</div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="card">
+        <h3>Code-curer</h3>
+        <p>Detects vulnerabilities in code using LLMs and attempts fixes automatically.</p>
+        <a class="link" href="https://github.com/Y4shwant/code-curer-fix" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <h3>Auto-recon tool</h3>
+        <p>CLI tool to perform advanced recon on websites for vulnerabilities.</p>
+        <a class="link" href="https://github.com/Y4shwant/Spider-Tasks" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <h3>CMS &amp; Multi-client Chat App</h3>
+        <p>CMS system and a multi-client real-time chat app (Dockerized, realtime features).</p>
+        <a class="link" href="https://github.com/Y4shwant/Delta-Tasks" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <h3>More projects</h3>
+        <p>More repos on my GitHub — pull requests, experiments and demos.</p>
+        <a class="link" href="https://github.com/Y4shwant" target="_blank" rel="noopener">My GitHub →</a>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2 style="margin:14px 0 6px 0">Contact</h2>
+      <div>Phone: <a class="contact-link" href="tel:+919498652765">+91 9498652765</a></div>
+      <div>Email: <a class="contact-link" href="mailto:yashu042006@gmail.com">yashu042006@gmail.com</a></div>
+      <div style="margin-top:8px">Profiles:
+        <a class="contact-link" href="https://github.com/Y4shwant" target="_blank" rel="noopener">GitHub</a>
+        <span style="color:var(--muted)"> · </span>
+        <a class="contact-link" href="https://www.linkedin.com/in/yashwant" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+
+    <div class="footer">Made with ⚡ on a dark terminal. Replace <code>portrait.jpg</code> and paste your Spotify iframe to personalize.</div>
+  </div>
+
+  <!-- Small helper script: allows swapping Spotify placeholder by pasting iframe HTML into developer console for previewing quickly. -->
+  <script>
+    // Quick helper: open devtools and run:
+    // document.querySelector('.spotify .placeholder').innerHTML = '<iframe src="https://open.spotify.com/embed/playlist/YOUR_ID" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>'
+
+    // Light keyboard easter egg: press H to toggle a hidden message
+    document.addEventListener('keydown', (e)=>{
+      if(e.key.toLowerCase()==='h'){
+        const f = document.querySelector('.footer');
+        if(f.style.opacity === '0.2'){
+          f.style.opacity = '1';
+          f.textContent = 'Made with ⚡ on a dark terminal. Replace portrait.jpg and paste your Spotify iframe to personalize.'
+        } else {
+          f.style.opacity = '0.2';
+          f.textContent = 'hey — you found a hidden message. keep building.'
+        }
+      }
+    })
+  </script>
+</body>
+</html>
